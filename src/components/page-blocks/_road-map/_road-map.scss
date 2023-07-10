@@ -1,0 +1,110 @@
+.road-map {
+  padding: 160px 0;
+  background-color: $color-grayscale-100;
+
+  &__inner {
+  }
+
+  &__heading {
+    margin-bottom: 16px;
+    text-align: center;
+    color: $color-background;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.24px;
+  }
+
+  &__text {
+    margin: 0 auto 105px;
+    width: 37%;
+    color: $color-grayscale-60;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+  }
+
+  &__list {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    text-align: center;
+    color: $color-grayscale-60;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin: 0 auto;
+      width: 77%;
+      height: 1px;
+      top: -36px;
+      right: 0;
+      left: 0;
+      background-color: $color-grayscale-60;
+
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: -48px;
+      left: 107px;
+      background-color: $color-background;
+      border: 5px solid $color-grayscale-60;
+      border-radius: 50%;
+      z-index: 5;
+    }
+  }
+
+  &__item-heading {
+    margin-bottom: 12px;
+    color: $color-background;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.16px;
+  }
+
+  &__item-text {
+    color: $color-grayscale-60;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+  }
+}
+
+@media (max-width: 970px) {
+  .road-map {
+    padding: 100px 15px;
+
+    &__text, &__item-text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__text {
+      margin-bottom: 90px;
+    }
+
+    &__item::after {
+      left: 87px;
+    }
+
+    &__item-heading {
+      margin-bottom: 8px;
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+}

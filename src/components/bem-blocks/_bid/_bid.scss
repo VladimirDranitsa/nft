@@ -1,0 +1,21 @@
+.bid {
+  padding: 16px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 60px;
+  border-radius: 16px;
+  border: 1px solid $color-grayscale-70;
+  background: $color-grayscale-10;
+  &__text {
+    color: $color-grayscale-70;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__price, &__timer {
+    padding: 2px 0;
+    color: $color-grayscale-100;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+}

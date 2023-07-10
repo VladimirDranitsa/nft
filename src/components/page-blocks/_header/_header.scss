@@ -1,0 +1,73 @@
+.header {
+  padding: 24px 0;
+  background: $color-background;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.16px;
+    color: $color-primary;
+    transition: $transition-speed;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    gap: 56px;
+  }
+  &__nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: $color-grayscale-100;
+    transition: $transition-speed;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  &__button-create, &__button-user {
+    @include no-btn();
+  }
+  &__button-create {
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    color: $color-grayscale-100;
+    background-color: $color-secondary;
+    border-radius: 32px;
+    transition: $transition-speed;
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+  &__button-user {
+    height: 40px;
+    width: 40px;
+    background-color: $color-primary;
+    border-radius: 50%;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -5px;
+      bottom: -5px;
+      background-image: url("../img/icons/verified.svg");
+    }
+  }
+}

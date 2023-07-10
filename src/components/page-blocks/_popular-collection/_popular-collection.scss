@@ -1,0 +1,152 @@
+.popular-collection {
+  padding: 120px 0;
+  background-color: $color-grayscale-10;
+
+  &__top {
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__heading {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.24px;
+    color: $color-grayscale-100;
+  }
+
+  &__top-button {
+    @include no-btn();
+    color: $color-grayscale-100;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    text-decoration-line: underline;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 36px;
+    overflow: hidden;
+  }
+
+  &__card:nth-child(n + 5) {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: $transition-speed;
+  }
+
+  &__card.open {
+    opacity: 1;
+  }
+
+  &__card-link {
+    display: block;
+    padding: 16px 8px;
+    max-width: 266px;
+    border-radius: 16px;
+    background: $color-background;
+    transition: $transition-speed;
+
+    &:hover {
+      background-color: $color-grayscale-20;
+    }
+  }
+
+  &__card-title {
+    color: $color-grayscale-100;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+  }
+
+  &__card-img {
+    margin: 16px 0;
+    max-width: 250px;
+  }
+
+  &__card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    background: #F9F9F9;
+    padding: 8px;
+  }
+
+  &__card-text {
+    color: $color-grayscale-60;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.07px;
+  }
+
+  &__card-price {
+    color: $color-grayscale-100;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+  }
+
+  &__card-timer {
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.06px;
+    color: $color-grayscale-100;
+    background-color: $color-secondary;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 1125px) {
+  .popular-collection {
+    padding: 80px 0;
+
+    &__top {
+      margin-bottom: 24px;
+    }
+    &__heading {
+      font-size: 36px;
+      line-height: 42px;
+    }
+    &__cards {
+      row-gap: 1px;
+      justify-content: space-around;
+    }
+    &__card {
+      transform: scale(.8);
+    }
+  }
+}
+
+@media (max-width: 562px) {
+  .popular-collection {
+    padding: 20px 0;
+
+    &__top {
+      margin-bottom: 12px;
+    }
+    &__heading {
+      font-size: 36px;
+      line-height: 42px;
+    }
+    &__cards {
+      justify-content: space-around;
+    }
+  }
+}

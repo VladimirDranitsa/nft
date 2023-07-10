@@ -1,0 +1,73 @@
+.show-card {
+  padding: 120px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
+  &__img {
+    max-width: 596px;
+    max-height: 562px;
+  }
+  &__info {
+    padding: 27px 0;
+    width: 100%;
+  }
+  &__status {
+    padding-left: 36px;
+    margin-bottom: 24px;
+    color: $color-grayscale-100;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.09px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 0;
+      bottom: 0;
+      border-radius: 50%;
+      background-color: $color-error;
+    }
+  }
+  &__collection {
+    color: $color-grayscale-70;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__heading {
+    margin-bottom: 16px;
+    color: $color-grayscale-100;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+  &__bid {
+    margin-bottom: 16px;
+  }
+  &__about-card {
+    display: flex;
+    gap: 48px;
+  }
+  &__about-heading {
+    margin-bottom: 8px;
+    color: $color-grayscale-70;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__about-button {
+    @include no-btn();
+    padding: 16px;
+    border-radius: 24px;
+    border: 1px solid #F0F0F0;
+    color: $color-grayscale-100;
+    background-color: $color-secondary;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.07px;
+  }
+}

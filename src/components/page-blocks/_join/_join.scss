@@ -1,0 +1,61 @@
+.join {
+  padding: 120px 15px;
+  &__heading {
+    margin-bottom: 24px;
+    color: $color-grayscale-100;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.24px;
+    text-align: center;
+  }
+  &__text {
+    margin-bottom: 48px;
+    color: $color-grayscale-100;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+  &__link-try, &__link-discord {
+    width: 218px;
+    color: $color-grayscale-100;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    border-radius: 32px;
+    padding: 24px 0;
+    transition: $transition-speed;
+  }
+  &__link-try {
+    background-color: $color-secondary;
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+  &__link-discord {
+    padding-left: 32px;
+    border: 1px solid $color-secondary;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 40px;
+      bottom: 25px;
+      width: 24px;
+      height: 18px;
+      background-image: url("./../img/icons/discord.svg");
+    }
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+}

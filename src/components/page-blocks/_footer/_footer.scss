@@ -1,0 +1,72 @@
+.footer {
+  padding: 80px 0;
+  background: $color-background;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav-list {
+    display: flex;
+    gap: 32px;
+  }
+  &__nav-link {
+    color: #171717;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    transition: $transition-speed;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+  &__social-list {
+    padding: 24px 0;
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+  }
+  &__social-link {
+    &--twitter, &--discord {
+      path {
+      fill: $color-grayscale-100;
+      }
+    }
+    &--facebook {
+      stroke: $color-grayscale-100;
+    }
+    //&:hover {
+    //  &--twitter, &--discord {
+    //    path {
+    //      fill: $color-secondary !important;
+    //    }
+    //  }
+    //  &--facebook {
+    //    stroke: $color-secondary !important;
+    //  }
+    //}
+  }
+  &__left-side-heading {
+    margin-bottom: 24px;
+    color: $color-grayscale-100;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.16px;
+  }
+  &__left-side-text {
+    color: $color-grayscale-100;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.12px;
+  }
+  &__copyrate {
+    text-align: right;
+    color: #8E8E8E;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.06px;
+  }
+}

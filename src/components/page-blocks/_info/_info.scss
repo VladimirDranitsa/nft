@@ -1,0 +1,9 @@
+.info {
+  padding: 120px 0;
+  gap: 60px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
